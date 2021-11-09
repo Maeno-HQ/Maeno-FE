@@ -1,1 +1,1 @@
-asasd
+curl \"https://api.github.com/repos/Maeno-HQ/Maeno-infra/actions/workflows/dispatch-reciver.yaml/dispatches\" -s -H \"Authorization: Token \" -d \"{ \"ref\":\"main\", \"inputs\":{ \"id\":\"v1.0.0\" } }\"
