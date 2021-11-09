@@ -44,10 +44,11 @@ jobs:
           asset_content_type: application/zip
           
       - name: send dispatch
-        run: "curl \"https://api.github.com/repos/$OWNER/$REPO/actions/workflows/$WORKFLOW/dispatches\" -s -H \"Authorization: Token $TOKEN\" -d \"{ \"ref\":\"master\", \"inputs\":{ \"id\":\"${{ steps.version.outputs.version }}\" } }\""
+        run: "curl \"https://api.github.com/repos/$OWNER/$REPO/actions/workflows/$WORKFLOW/dispatches\" -s -H \"Authorization: Token $TOKEN\" -d \"{ \"ref\":\"master\", \"inputs\":{ \"id\":\"$VERSION\" } }\""
         env:
           OWNER: Maeno-HQ
           REPO: Maeno-infra
-          WORKFLOW: dispatch-reciver.yaml
+          WORKFLOW: 15089213
+          VERSION: ${{ steps.version.outputs.version }}
           TOKEN: ${{ secrets.REPO_TOKEN }}
 
