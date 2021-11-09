@@ -2,8 +2,8 @@ name: Dispatcher
 
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - main
 
 jobs:
   build_release:
