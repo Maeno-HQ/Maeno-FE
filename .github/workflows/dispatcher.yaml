@@ -49,5 +49,5 @@ jobs:
           REPO: Maeno-infra
           WORKFLOW: dispatch-reciver.yaml
           TOKEN: ${{ secrets.REPO_TOKEN }}
-        run: curl "https://api.github.com/repos/$OWNER/$REPO/actions/workflows/$WORKFLOW/dispatches" -s -H "Authorization: Token $TOKEN" -d "{ \"ref\":\"master\", \"inputs\":{ \"id\":\"${{ steps.version.outputs.version }}\" } }"
+        run: curl "https://api.github.com/repos/$OWNER/$REPO/actions/workflows/$WORKFLOW/dispatches" -s -H "Authorization: Token $TOKEN" -d '{ "ref":"master", "inputs":{ "id":"${{ steps.version.outputs.version }}" } }'
 
