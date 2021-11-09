@@ -28,8 +28,8 @@ jobs:
         with:
           draft: false
           prerelease: false
-          release_name: Maeno
-          tag_name: ${{ steps.version.outputs.version }}
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: Maeno
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - name: upload linux artifact
