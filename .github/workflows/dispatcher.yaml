@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: version
-        run: echo "::set-output name=version::$(cat version.md | cut -d ':' -f2 | awk '{$1=$1};1')"
+        run: echo "::set-output name=version::$(cat version | cut -d ':' -f2 | awk '{$1=$1};1')"
         id: version
         
       - name: build artifacts
