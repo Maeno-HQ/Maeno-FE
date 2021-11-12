@@ -28,8 +28,8 @@ jobs:
         with:
           draft: false
           prerelease: false
-          release_name: ${{ steps.version.outputs.version }}
-          tag_name: Maeno
+          release_name: Maeno-${{ steps.version.outputs.version }}
+          tag_name: ${{ steps.version.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
           
