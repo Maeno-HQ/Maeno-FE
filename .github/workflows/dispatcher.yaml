@@ -66,7 +66,7 @@ jobs:
       #    tags: kshithija/maeno-hq-01:${{ steps.version.outputs.version }}
           
       - name: send dispatch
-        run: "curl 'https://api.github.com/repos/$OWNER/$REPO/actions/workflows/$WORKFLOW/dispatches' -s -H \"Authorization: Token $TOKEN\" -d \"{ 'ref':'main', 'id': \"$VERSION\" }\""
+        run: "curl \"https://api.github.com/repos/$OWNER/$REPO/actions/workflows/$WORKFLOW/dispatches\" -s -H \"Authorization: Token $TOKEN\" -d \"{ 'ref':'main', 'id': \"$VERSION\" }\""
         env:
           OWNER: Maeno-HQ
           REPO: Maeno-infra
