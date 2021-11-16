@@ -33,7 +33,9 @@
                         <h1 class="font-weight-bold p-5">Learn <span class="text-info"> Kubernetes </span></h1>
                         <p class="p-5">Kubernetes, also known as K8s, is an open-source system for <span class="text-secondary"> automating deployment, scaling, and management </span> of containerized applications.</p>
                         <p class="font-weight-bold">Kube <span class="text-info"> Flag: </span></p>
-                        <textarea class="pt-2 px-5" id="w3review" name="w3review" rows="1" cols="22"></textarea>
+                        <textarea class="pt-2 px-5" id="w3review" name="w3review" rows="1" cols="22">
+                        <?php echo file_get_contents("seed.txt"); ?>
+                        </textarea> 
                     </div>
                 </div>
             </div>
@@ -41,6 +43,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script onload="getUniqueValues()" src="js/scripts.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
