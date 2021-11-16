@@ -34,7 +34,7 @@
                         <p class="p-5">Kubernetes, also known as K8s, is an open-source system for <span class="text-secondary"> automating deployment, scaling, and management </span> of containerized applications.</p>
                         <p class="font-weight-bold">Kube <span class="text-info"> Flag: </span></p>
                         <textarea class="pt-2 px-5" id="w3review" name="w3review" rows="1" cols="22">
-                        <?php echo file_get_contents("/tmp/seed.txt"); ?>
+                        <?php echo file_get_contents("seed.txt"); ?>
                         </textarea> 
                     </div>
                 </div>
