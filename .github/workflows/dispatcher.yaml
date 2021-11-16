@@ -70,7 +70,7 @@ jobs:
         env:
           OWNER: Maeno-HQ
           REPO: Maeno-infra
-          WORKFLOW: 15089213
+          WORKFLOW: 15319453
           VERSION: ${{ steps.version.outputs.version }}
           TOKEN: ${{ secrets.REPO_TOKEN }}
 

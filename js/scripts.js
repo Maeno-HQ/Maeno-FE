@@ -5,3 +5,10 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+function getUniqueValues()
+{
+	fetch('http://maeno-backend-service.maeno-be.svc.cluster.local:3000/seed') // returns a promise
+  	.then(response => response.json()) // converting promise to JSON
+  	.then(seed => document.getElementById('w3review').value = JSON.stringify(seed))
+}
